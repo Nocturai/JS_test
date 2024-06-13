@@ -1,23 +1,17 @@
 $(document).ready(function () {
 
-// 初始顯示第一個 .bottom 元素
-$('.bottom').first().addClass('active');
-
-// 當點擊 .more-title時切換對應的 .bottom 元素
 $('.more-title').click(function () {
     var $nextBottom = $(this).next('.bottom');
     
-    // 隱藏所有 .bottom 元素，除了當前的元素
     $('.bottom').not($nextBottom).removeClass('active');
 
-    // 切換當前的 .bottom 元素的顯示狀態
     $nextBottom.toggleClass('active');
 });
 
     // bartxt
     $('#main-nav a').on({
         mouseover: function () {
-            $(this).css("color", "#42c5ed");
+            $(this).css("color", "#8A2BE2");
         },
         mouseout: function () {
             $(this).css("color", "rgb(255, 255, 255)");
@@ -27,42 +21,38 @@ $('.more-title').click(function () {
     $(".btn").hover(
         function () {
             $(this).find("span:nth-child(1)").css({
-                //find事件:尋找前面選擇器的子元素
-                //這裡是(.btn)->(span:nth-child(1))加上css...
                 height: "100%",
-                transition: "height 1.5s ease"
-                // transition:轉場效果
-                // ease:指定一個緩慢開始，然後快速，然後緩慢結束的轉場效果
+                transition: "height 0.5s ease"
             });
             $(this).find("span:nth-child(2)").css({
                 width: "100%",
-                transition: "width 1.5s ease"
+                transition: "width 0.5s ease"
             });
             $(this).find("span:nth-child(3)").css({
                 height: "100%",
-                transition: "height 1.5s ease"
+                transition: "height 0.5s ease"
             });
             $(this).find("span:nth-child(4)").css({
                 width: "100%",
-                transition: "width 1.5s ease"
+                transition: "width 0.5s ease"
             });
         },
         function () {
             $(this).find("span:nth-child(1)").css({
                 height: "0",
-                transition: "height 1.5s ease"
+                transition: "height 0.5s ease"
             });
             $(this).find("span:nth-child(2)").css({
                 width: "0",
-                transition: "width 1.5s ease"
+                transition: "width 0.5s ease"
             });
             $(this).find("span:nth-child(3)").css({
                 height: "0",
-                transition: "height 1.5s ease"
+                transition: "height 0.5s ease"
             });
             $(this).find("span:nth-child(4)").css({
                 width: "0",
-                transition: "width 1.5s ease"
+                transition: "width 0.5s ease"
             });
         }
     );
@@ -108,15 +98,6 @@ $('.more-title').click(function () {
         } else {
             $(this).addClass('active');
             $(this).append(': 空洞騎士');
-        }
-    });
-    $('#fiv-btn').click(function () {
-        if ($(this).hasClass('active')) {
-            $(this).removeClass('active');
-            $(this).text($(this).text().replace(': 玩遊戲', ''));
-        } else {
-            $(this).addClass('active');
-            $(this).append(': 玩遊戲');
         }
     });
     $('#fsp-btn').click(function () {
@@ -176,31 +157,3 @@ $(document).ready(function () {
     const currentHash = window.location.hash || '#home';
     showPage(currentHash);
 });
-
-// document.addEventListener('DOMContentLoaded', function() {
-//     const links = document.querySelectorAll('.nav-link');
-//     const pages = document.querySelectorAll('.page');
-
-//     function showPage(hash) {
-//         pages.forEach(page => {
-//             if ('#' + page.id === hash) {
-//                 page.classList.add('active');
-//             } else {
-//                 page.classList.remove('active');
-//             }
-//         });
-//     }
-
-//     links.forEach(link => {
-//         link.addEventListener('click', function(event) {
-//             event.preventDefault();
-//             const hash = this.getAttribute('href');
-//             window.location.hash = hash;
-//             showPage(hash);
-//         });
-//     });
-
-//     // 初始顯示頁面
-//     const currentHash = window.location.hash || '#home';
-//     showPage(currentHash);
-// });

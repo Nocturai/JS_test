@@ -13,7 +13,7 @@
       text-align: center;
       position:relative;
       letter-spacing: 7px;
-      background-color: #82d5b0;
+      background-color: #558971;
 }
 .sma-div{
     background-color: rgba(255, 255, 255, 0);
@@ -105,6 +105,7 @@ html,body{
     font-size:30px;
     font-weight:bold;
     padding: 20px;
+    color: #ffffff;
 }
 .more-title:hover{
     color: #5b9fee;
@@ -295,13 +296,13 @@ html,body{
 }
 
 .bottom {
-    display: none; /* 初始化為隱藏 */
+    display: none;
 }
 .bottom.active {
-    display: flex; /* 顯示為 flex 布局 */
+    display: flex;
 }
 .more-title, .more-title-ch {
-    cursor: pointer; /* 添加光標效果，表示可點擊 */
+    cursor: pointer; /* 添加外觀效果，表示可點擊 */
     margin: 20px 0;
     font-size: 20px;
 }

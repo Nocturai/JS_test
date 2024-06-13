@@ -110,9 +110,9 @@ header {
 }
 
 .line {
-  width: 60%;
+  width: 75%;
   justify-content: center;
-  height: 5%;
+  height: 10%;
   margin-top: 15%;
   background-color: rgb(255, 255, 255);
 }
