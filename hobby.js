@@ -1,14 +1,13 @@
 $(document).ready(function () {
 
-$('.more-title').click(function () {
-    var $nextBottom = $(this).next('.bottom');
-    
-    $('.bottom').not($nextBottom).removeClass('active');
+    $('.more-title').click(function () {
+        var $nextBottom = $(this).next('.bottom');
 
-    $nextBottom.toggleClass('active');
-});
+        $('.bottom').not($nextBottom).removeClass('active');
 
-    // bartxt
+        $nextBottom.toggleClass('active');
+    });
+
     $('#main-nav a').on({
         mouseover: function () {
             $(this).css("color", "#8A2BE2");
@@ -30,7 +29,7 @@ $('.more-title').click(function () {
             });
             $(this).find("span:nth-child(3)").css({
                 height: "100%",
-                transition: "height 0.5s ease"
+                transition: "height s ease"
             });
             $(this).find("span:nth-child(4)").css({
                 width: "100%",
@@ -64,15 +63,17 @@ $('.more-title').click(function () {
         } else {
             $(this).addClass('active');
             $(this).append(': 特戰英豪');
-        }});
-        $('#fag-btn').click(function () {
-            if ($(this).hasClass('active')) {
-                $(this).removeClass('active');
-                $(this).text($(this).text().replace(': MuseDash', ''));
-            } else {
-                $(this).addClass('active');
-                $(this).append(': MuseDash');
-            }});
+        }
+    });
+    $('#fag-btn').click(function () {
+        if ($(this).hasClass('active')) {
+            $(this).removeClass('active');
+            $(this).text($(this).text().replace(': MuseDash', ''));
+        } else {
+            $(this).addClass('active');
+            $(this).append(': MuseDash');
+        }
+    });
     $('#fso-btn').click(function () {
         if ($(this).hasClass('active')) {
             $(this).removeClass('active');
@@ -118,7 +119,7 @@ $('.more-title').click(function () {
             $(this).append(': undefined');
         }
     });
-    
+
 });
 
 $('.hamburger-menu').click(function () {
@@ -127,7 +128,7 @@ $('.hamburger-menu').click(function () {
     $('.hamburger-menu').toggleClass('move');
 
 });
-$('.fullscreen-menu:not(ul)').click(function () { //若全屏選單已經開啟且被點擊任一處，則關閉選單(把選單加上display:none的效果)
+$('.fullscreen-menu:not(ul)').click(function () {
     $('.fullscreen-menu').toggleClass('display_nav');
     $('div:not(.fullscreen-menu,.hamburger-menu,.line)').toggleClass('blur');
 });
@@ -153,7 +154,6 @@ $(document).ready(function () {
         showPage(hash);
     });
 
-    // 初始顯示頁面
     const currentHash = window.location.hash || '#home';
     showPage(currentHash);
 });

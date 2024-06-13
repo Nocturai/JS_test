@@ -1,5 +1,4 @@
 * {
-  /*   border: solid 1px; */
   vertical-align: top;
   font-family: Arial;
   text-align: center;
@@ -17,7 +16,6 @@ body {
 
   margin: 0px;
   padding: 0px;
-  /* background-color:; */
 }
 
 .title {
@@ -52,7 +50,7 @@ body {
 .left,
 .right {
   display: inline-block;
-  /* weight:50%; */
+
   height: 100px;
   box-sizing: border-box;
 }
@@ -177,10 +175,7 @@ body {
 
 .rtop .h2 {
   margin-bottom: 10px;
-
 }
-
-
 
 .circle {
   display: inline-block;
@@ -214,7 +209,6 @@ body {
 }
 
 .inside1 {
-  /*   border: solid 1px black; */
   width: 50px;
   height: 50px;
   right: -38px;
@@ -225,7 +219,6 @@ body {
 }
 
 .inside {
-  /*   border: solid 1px black; */
   width: 50px;
   height: 50px;
   right: -25px;
